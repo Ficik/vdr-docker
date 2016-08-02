@@ -1,0 +1,17 @@
+version: '2'
+services:
+  vdr:
+    build: "."
+    image: ficik/vdr:latest
+    container_name: "vdr"
+    privileged: true
+#    environment:
+#      - VDR_CHARSET_OVERRIDE:ISO-8859-2
+    ports:
+      - 6419:6419
+      - 34890:34890
+      - 34892:34892
+      - 8008:8008
+      - 3000:3000
+    volumes:
+      - ./config:/var/lib/vdr
