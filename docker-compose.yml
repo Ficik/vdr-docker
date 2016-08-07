@@ -5,7 +5,8 @@ services:
     image: ficik/vdr:latest
     container_name: "vdr"
     privileged: true
-#    environment:
+    environment:
+      - LC_ALL=en_US.UTF-8
 #      - VDR_CHARSET_OVERRIDE:ISO-8859-2
     ports:
       - 6419:6419
